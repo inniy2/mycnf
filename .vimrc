@@ -30,8 +30,8 @@ filetype plugin on    " required
 
 
 " Clipboard setting
-"set clipboard=unnamed
-set nu
+" set clipboard=unnamed
+" set nu
 set hlsearch
 
 set  paste
@@ -70,3 +70,11 @@ set bg=dark
 " indentation
 set  expandtab
 set  tabstop=4
+
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
+
+augroup twig_ft
+  au!
+  autocmd BufNewFile,BufRead *.txt   set filetype=sh
+augroup END
